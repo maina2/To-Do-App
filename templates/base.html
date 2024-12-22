@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title_block %}
+    <title>Document</title> 
+    {% endblock title_block %}
+    {% block css_block %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock css_block %}
+    
+</head>
+<body>
+    {% block content_block %}
+        
+    {% endblock content_block %}
+    
+</body>
+</html>
