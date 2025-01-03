@@ -61,6 +61,131 @@ body {
     background-color: #ffffff;
     box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
 }
+/* Textarea Styling */
+textarea {
+    padding: 12px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    resize: vertical; /* Allows vertical resizing only */
+    height: 3rem;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #007bff;
+    background-color: #ffffff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
+}
+input[type="date"] {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333333;
+    outline: none;
+}
+
+input[type="date"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the task list */
+.task-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+/* Task list header */
+.task-container h1 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Styling for the list */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for task title */
+li strong {
+    font-size: 18px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Paragraph styling inside the list */
+li p {
+    margin: 0;
+    font-size: 14px;
+    color: #555555;
+}
+
+/* Priority tag styling */
+li p:nth-child(4) {
+    font-weight: bold;
+    color: #007bff; /* Default for priority */
+}
+
+li p:nth-child(4):contains("High") {
+    color: #e74c3c;
+}
+
+li p:nth-child(4):contains("Medium") {
+    color: #f39c12;
+}
+
+li p:nth-child(4):contains("Low") {
+    color: #27ae60;
+}
+
+/* No tasks message */
+.no-tasks {
+    text-align: center;
+    font-size: 16px;
+    color: #888888;
+    padding: 20px;
+}
+
+
 
 /* Button Styling */
 .btn-submit {
@@ -93,5 +218,73 @@ body {
     .btn-submit {
         font-size: 14px;
         padding: 8px;
+    }
+}
+/* General button styles */
+a.btn-edit, a.btn-delete {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Edit button styling */
+a.btn-edit {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+a.btn-edit:hover {
+    background-color: #45a049;
+}
+
+/* Delete button styling */
+a.btn-delete {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+a.btn-delete:hover {
+    background-color: #e53935;
+}
+
+/* Optional: Style for the task list container */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+ul li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .task-container {
+        padding: 15px;
+    }
+
+    li {
+        padding: 10px;
+    }
+
+    li strong {
+        font-size: 16px;
+    }
+
+    li p {
+        font-size: 12px;
     }
 }

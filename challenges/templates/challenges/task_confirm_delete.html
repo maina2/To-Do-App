@@ -1,0 +1,15 @@
+<!-- task_confirm_delete.html -->
+{% extends "base.html" %}
+{% load static %}
+{% block css_block %}
+<link rel="stylesheet" href="{% static 'challenges/tasks.css' %}">
+{% endblock css_block %}
+
+{% block content_block %}
+<h1>Are you sure you want to delete this task?</h1>
+<form method="POST" class="task-form">
+    {% csrf_token %}
+    <button type="submit">Yes, delete</button>
+</form>
+<a href="{% url 'task_list' %}">Cancel</a>
+{% endblock %}
